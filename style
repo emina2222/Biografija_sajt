@@ -1,0 +1,233 @@
+@media only screen and (max-width: 570px) {
+    .tekstDobrodoslice{
+        font-size: 5vw !important;
+    }
+    .link{
+        font-size: 5vw !important;
+    }
+}
+
+
+.slova{
+    color:white;
+}
+.centar{
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+body{
+    background-image:url("images/m1.jpg") ;
+}
+.dugme{
+    border-radius: 10%;
+    border:3px solid blue;
+    background-color: transparent;
+}
+.pozadina{
+    background-color:rgba(255, 255, 255, 0.8);
+}
+.dzambo{
+    background-color: transparent;
+}
+.slika{
+    background-image: url("images/m1.jpg");
+}
+.crnaSlova{
+    color:black;
+}
+.navigacijaPozadina{
+    font-size: 1.5em;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    color:black;
+    border-top: 3px solid transparent;
+}
+.linijaIznadAktivnog{
+    border-top: 3px solid white !important;
+}
+a.nav-item:hover{
+    border-top: 3px solid white !important;
+}
+a.nav-item{
+    border-top: 3px solid transparent;
+}
+.roditelj{
+    position: relative;
+    text-align: center;
+    color:white;
+}
+.tekstGore{
+    background-color: rgba(127,127,127,0.3);
+    position: absolute;
+    top:10%;
+    left:10%;
+    padding: 3%;
+}
+.tekstSaStrane{
+    background-color: rgba(127,127,127,0.3);
+    position: absolute;
+    bottom:5%;
+    right:5%;
+    padding: 2%;
+}
+.tekstDobrodoslice{
+    font-size: 3em;
+    font-family: 'Rajdhani';
+}
+.link{
+    font-size: 1.5em;
+    text-decoration: none;
+    color:white;
+    border-radius: 0% !important;
+    font-family: 'Rajdhani';
+}
+.link:hover{
+    text-decoration: none;
+}
+.dugmeKontakt{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    margin-bottom: 0.3em;
+}
+h1{
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.profil{
+    margin-bottom: 0.5em;
+    background-color: rgba(255, 153, 255,0.3);
+    font-family: 'Sriracha', sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+ul li{
+    font-family: 'Sriracha', sans-serif;
+    font-size: 1.1em;
+}
+.prelaz:hover{
+    color:red;
+}
+.oznake{
+    font-size: 3em;
+    text-align: center;
+}
+.oznake:hover{
+    color:red;
+}
+.container{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.footerP{
+    background-color: rgba(255,153,255,0.7);
+    padding:1%;
+    font-family: 'Anton', sans-serif;
+}
+.kopirajt{
+    font-size: 2em;
+}
+.tekstIspodSlike{
+    font-family: 'Sriracha', sans-serif;
+    text-align: center;
+    background-color:rgba(255,153,255,0.7);
+    font-style: italic;
+}
+.natpis{
+    font-family: 'Lobster', sans-serif;
+}
+.sekcija{
+    animation-name: efekti;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    text-align: center;
+    font-family: 'Lobster', sans-serif;
+}
+
+@keyframes efekti {
+    0% {color:rgba(0,0,0,0.0)}
+    25% {color:rgba(0,0,0,0.2)}
+    50% {color:rgba(0,0,0,0.5)}
+    100% {color:rgba(0,0,0,1.0)}
+}
+
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before { /*prikazuje pre ul elementa vertikalnu crtu*/
+    content: ' ';
+    background: lightblue;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li { /*odnosi se na sve li elemente koji su unutar elementa ul sa klasom timeline*/
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before { /*prikazuje ovo pre svakog li elementa,tj kruzic je ispred svakog nabrajanja u timelineu*/
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+.dugmeZaGaleriju{
+    position:absolute;
+    top:50%;
+    left: 33%;
+    opacity: 0;
+}
+@keyframes vidljivost {
+    0%{opacity: 0}
+    25%{opacity: 0.25}
+    50%{opacity: 0.5}
+    75%{opacity: 0.75}
+    100%{opacity: 1}
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+}
+.roditelj2{
+    position: relative;
+    text-align: center;
+    color:white;
+}
+.roditelj2:hover .overlay{
+    display: block;
+    background: rgba(0, 0, 0, .5);
+}
+.roditelj2:hover .dugmeZaGaleriju{
+    position: absolute;
+    z-index: 1;
+    animation-name: vidljivost;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+.verticalLine{
+    border-right: 1px solid grey;
+}
+.pozadineZaProfesiju{
+    background-color: rgba(255, 153, 255,0.6);
+}
